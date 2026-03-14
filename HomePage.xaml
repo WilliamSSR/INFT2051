@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CycleWise.Pages.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Home">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="18">
+
+            <Label
+                Text="CycleWise"
+                FontSize="28"
+                FontAttributes="Bold" />
+
+            <Label
+                Text="Track your period, flow and mood in one place."
+                FontSize="16"
+                TextColor="Gray" />
+
+            <Border StrokeThickness="1" Padding="16">
+                <VerticalStackLayout Spacing="10">
+                    <Label
+                        Text="Latest Record"
+                        FontAttributes="Bold"
+                        FontSize="18" />
+
+                    <Label
+                        x:Name="LatestLogLabel"
+                        Text="No records yet."
+                        FontSize="15" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border StrokeThickness="1" Padding="16">
+                <VerticalStackLayout Spacing="10">
+                    <Label
+                        Text="Prediction"
+                        FontAttributes="Bold"
+                        FontSize="18" />
+
+                    <Label
+                        x:Name="PredictionLabel"
+                        Text="Add at least one record to see a basic prediction."
+                        FontSize="15" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Button
+                Text="Add New Log"
+                Clicked="OnGoToLogClicked" />
+
+            <Button
+                Text="View History"
+                Clicked="OnGoToHistoryClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
